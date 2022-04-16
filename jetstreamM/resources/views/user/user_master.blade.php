@@ -7,7 +7,7 @@
         <meta name="author" content="">
         <link rel="icon" href="{{asset('userbackend/panel/assets/images/favicon.png')}}" >
         <!--Page title-->
-        <title>Admin easy Learning</title>
+        <title>User Control Center</title>
         <!--bootstrap-->
         <link rel="stylesheet" href="{{asset('userbackend/panel/assets/css/bootstrap.min.css')}}">
         <!--font awesome-->
@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="{{asset('userbackend/panel/assets/plugins/metismenu-3.0.4/assets/css/metisMenu.min.css')}}">
         <link rel="stylesheet" href="{{asset('userbackend/panel/assets/plugins/metismenu-3.0.4/assets/css/mm-vertical-hover.css')}}">
         <!-- chart -->
-   
+
         <!-- <link rel="stylesheet" href="assets/plugins/chartjs-bar-chart/chart.css"> -->
         <!--Custom CSS-->
         <link rel="stylesheet" href="{{asset('userbackend/panel/assets/css/style.css')}}">
@@ -28,7 +28,7 @@
         </div>
         <!-- wrapper -->
         <div class="wrapper">
-         
+
             <!-- header area -->
             <header class="header_area">
                 <!-- logo -->
@@ -46,7 +46,7 @@
                         <div class="modal fade search_box" id="myModal">
                               <button type="button" class="close m-2 text-white float-right" data-dismiss="modal">&times;</button>
                               <form action="#" class="modal-dialog modal-lg">
-                                
+
                                 <div class="modal-content bg-transparent">
                                       <!-- Modal body -->
                                       <div class="modal-body">
@@ -54,7 +54,7 @@
                                         <button class="btn btn-lg submit-btn" type="submit">Search</button>
                                       </div>
                                 </div>
-                                 
+
                               </form>
                         </div>
                     </li>
@@ -256,7 +256,7 @@
                                     <a href="#" class="user_link"><img src="{{asset('userbackend/panel/assets/images/admin.jpg')}}" alt=""></a>
                                 </div>
                             <ul>
-                                
+
                                 <li><a href="#"><span><i class="fas fa-user"></i></span> User Profile</a></li>
                                 <li><a href=" "><span><i class="fas fa-cogs"></i></span>  Password Change</a></li>
                                 <li>
@@ -391,10 +391,10 @@
             </aside><!-- /sidebar Area-->
 
 
-         
 
 
-  
+
+
 <div class="content_wrapper">
    @yield('user')
 </div><!--/ content wrapper -->
@@ -411,7 +411,7 @@
         </div><!--/ wrapper -->
 
 
-        
+
         <!-- jquery -->
         <script src="{{asset('userbackend/panel/assets/js/jquery.min.js')}}"></script>
         <!-- popper Min Js -->
@@ -434,14 +434,15 @@
         <!-- pie chart -->
         <script src="{{asset('userbackend/panel/assets/plugins/pie_chart/chart.loader.js')}}"></script>
         <script src="{{asset('userbackend/panel/assets/plugins/pie_chart/pie.active.js')}}"></script>
- 
- 
+
+
         <!-- Main js -->
         <script src="{{asset('userbackend/panel/assets/js/main.js')}}"></script>
 
-    
-     
+
+
 
 
     </body>
 </html>
+

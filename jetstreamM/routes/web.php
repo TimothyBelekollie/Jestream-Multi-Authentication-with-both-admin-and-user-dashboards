@@ -34,7 +34,7 @@ Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', f
 
 
 
-
+// User routes
 Route::middleware(['auth:sanctum, web', 'verified'])->get('/dashboard', function () {
     return view('user.index');
 
@@ -42,3 +42,5 @@ Route::middleware(['auth:sanctum, web', 'verified'])->get('/dashboard', function
 Route::get('/user/logout',[MainUserController::class,'Logout'])->name('user.logout');
 Route::get('/user/login',[MainUserController::class,'Login'])->name('user.login');
 Route::get('/user/register',[MainUserController::class,'Register'])->name('user.register');
+Route::get('/user/profile',[MainUserController::class,'UserProfile'])->name('user.profile');
+Route::get('/user/profile/edit',[MainUserController::class,'UserProfileEdit'])->name('profile.edit');

@@ -44,3 +44,4 @@ Route::get('/user/login',[MainUserController::class,'Login'])->name('user.login'
 Route::get('/user/register',[MainUserController::class,'Register'])->name('user.register');
 Route::get('/user/profile',[MainUserController::class,'UserProfile'])->name('user.profile');
 Route::get('/user/profile/edit',[MainUserController::class,'UserProfileEdit'])->name('profile.edit');
+Route::Post('/user/profile/update',[MainUserController::class,'UserProfileUpdate'])->name('profile.update');

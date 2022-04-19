@@ -7,14 +7,15 @@
 <div class="col-md-6">
 
 
- <form>
+ <form action="{{route('profile.update')}}" method="POST" enctype="multipart/form-data">
+  @csrf
     <div class="mb-3">
-     <img id="showImage" style=" width:100px; height:100px; margin-left:20px;" src="{{(!empty($user->profile_photo_path ))? url('upload/user_images/'.$user->profile_photo_path):url('upload/no_image.jpg')}}">
+     <img id="showImage" style=" width:100px; height:100px; margin-left:20px;" src="{{(!empty($editData->profile_photo_path ))? url('upload/user_images/'.$editData->profile_photo_path):url('upload/no_image.jpg')}}">
       </div>
 
       <div class="mb-3">
         <label for="formFile" class="form-label">Profile Image</label>
-        <input class="form-control" type="file" id="image">
+        <input class="form-control" name="profile_photo_path" type="file" id="image">
       </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">User Name</label>

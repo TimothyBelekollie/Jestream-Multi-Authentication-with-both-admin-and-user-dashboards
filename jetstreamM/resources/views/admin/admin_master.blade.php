@@ -29,7 +29,7 @@
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
 
-    <title>Starlight Responsive Bootstrap 4 Admin Template</title>
+    <title>TimXperience ADMIN DASHBOARD</title>
 
     <!-- vendor css -->
     <link href="{{asset('adminbackend/lib/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
@@ -39,12 +39,14 @@
 
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="{{asset('adminbackend/css/starlight.css')}}">
+     {{-- toaster --}}
+     <link  href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"   rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
     <!-- ########## START: LEFT PANEL ########## -->
-    <div class="sl-logo"><a href=""><i class="icon ion-android-star-outline"></i> starlight</a></div>
+    <div class="sl-logo"><a href=""><i class="icon ion-android-star-outline"></i> TimXperience</a></div>
   @include('admin.body.sidebar')
     <!-- sl-sideleft -->
     <!-- ########## END: LEFT PANEL ########## -->
@@ -62,14 +64,16 @@
     <!-- ########## START: MAIN PANEL ########## -->
     <div class="sl-mainpanel">
         <nav class="breadcrumb sl-breadcrumb">
-            <a class="breadcrumb-item" href="index.html">Starlight</a>
+            <a class="breadcrumb-item" href="index.html">ADMIN</a>
             <span class="breadcrumb-item active">Dashboard</span>
         </nav>
 
       @yield('admin')
+
         <!-- sl-pagebody -->
-    @include('admin.body.footer');
+        @include('admin.body.footer');
     </div>
+
     <!-- sl-mainpanel -->
     <!-- ########## END: MAIN PANEL ########## -->
 
@@ -90,6 +94,30 @@
     <script src="{{asset('adminbackend/js/starlight.js')}}"></script>
     <script src="{{asset('adminbackend/js/ResizeSensor.js')}}"></script>
     <script src="{{asset('adminbackend/js/dashboard.js')}}"></script>
+{{-- toastr js --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        @if (Session::has('message'))
+        var type = "{{Session::get('alert-type','info')}}"
+
+        switch(type){
+          case 'info':
+          toastr.info("{{Session::get('message')}} ");
+          break;
+          case 'success':
+          toastr.success("{{Session::get('message')}} ");
+          break;
+          case 'warning':
+          toastr.warning("{{Session::get('message')}} ");
+          break;
+          case 'error':
+          toastr.error("{{Session::get('message')}} ");
+          break;
+        }
+
+        @endif
+      </script>
 </body>
 
 </html>

@@ -58,7 +58,7 @@ return redirect()->route('user.profile')->with($notification);
         return view('user.password.edit_password',compact('userpassword'));
     }
 
-    public function UserPasswordUpdte(Request $request){
+    public function UserPasswordUpdate(Request $request){
 $validateData=$request->validate([
     'oldpassword'=>'required',
     'password'=>'required|confirmed',

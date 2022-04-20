@@ -45,3 +45,6 @@ Route::get('/user/register',[MainUserController::class,'Register'])->name('user.
 Route::get('/user/profile',[MainUserController::class,'UserProfile'])->name('user.profile');
 Route::get('/user/profile/edit',[MainUserController::class,'UserProfileEdit'])->name('profile.edit');
 Route::Post('/user/profile/update',[MainUserController::class,'UserProfileUpdate'])->name('profile.update');
+//User Password Update
+Route::get('/user/password/view',[MainUserController::class,'UserPasswordView'])->name('user.password.view');
+Route::post('/user/password/update',[MainUserController::class,'UserPasswordUpdte'])->name('password.update');
